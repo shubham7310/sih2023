@@ -1,0 +1,150 @@
+.story-question-container {
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+    width:800px ;
+    height: 400px;
+    justify-content: space-around;
+    flex-direction: column;
+    
+
+    
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#story-recall-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+#story-recall-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#repeat-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+   
+}
+#show-story-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+   
+}
+
+
+/*for background*/
+*{
+    margin: 0;
+    padding: 0;
+  }
+  section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    overflow: hidden;
+  }
+  section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px
+  }
+  section .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+  /* thats it*/
+  /* for timer*/
+  .timer-container {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.countdown-bar {
+    background-color: #ccc;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#countdown-timer {
+    background-color: #3498db;
+    height: 100%;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+.next1 {
+  background-color:#007bff;
+  color: rgb(255, 255, 255);
+position: relative;
+  width: 195px;
+align-self: center;
+padding: 10px;
+border-radius: 5px;
+margin-left: -25px;}

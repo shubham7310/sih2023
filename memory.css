@@ -1,0 +1,172 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card.matched {
+    background-color: #4CAF50;
+    color: white;
+    pointer-events: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    overflow: hidden;
+  }
+  section .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px
+  }
+  section .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  section .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  section .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  section .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
+  #start-game-button{
+   
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 20px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        width: 200px;
+        justify-content: center;
+        margin-left: 38%;
+        margin-top: 10px;
+    
+    }
+    #mute-button
+    {
+        background-color: #cde5ffa3;
+        color: white;
+        border: none;
+        padding: 20px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        width: 100px;
+        justify-content: center;
+        margin-left: 10px;
+        margin-top: 10px;
+    
+    }
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ 
+}
+.memorycard-container {
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+    width:800px ;
+    height: 550px;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    
+
+    
+}
+
+ /* Style to hide all audio controls except mute */
+#background-music::-webkit-media-controls {
+    display: none;
+}
+
+/* Style to customize the mute button */
+#background-music::-webkit-media-controls-mute-button {
+    display: initial; /* Show the mute button */
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove the border */
+    width: 24px; /* Adjust width as needed */
+    height: 24px; /* Adjust height as needed */
+    cursor: pointer;
+}
+
+/* Style to hide other audio controls for Firefox */
+#background-music {
+    display: block;
+}
+
+/* Style to hide other audio controls for non-WebKit browsers */
+#background-music::-webkit-media-controls-panel {
+    display: none;
+}

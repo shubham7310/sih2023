@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="clock.css" />
+    <title>Analog Clock</title>
+  </head>
+  <body>
+    <div class="context">
+      <div class="centered-container">
+        <div class="clock-container">
+          <h1>Lets have fun with Clock!!</h1>
+          <h2 style="margin-left: 20%; color: white;">
+            Enter time and see Mr.Clock show the time..
+          </h2>
+
+          <div class="clock">
+            <div class="hour-hand" id="hour-hand"></div>
+            <div class="minute-hand" id="minute-hand"></div>
+            <div class="center-circle"></div>
+            <div class="numbers">
+              <div class="number number1">1</div>
+              <div class="number number2">2</div>
+              <div class="number number3">3</div>
+              <div class="number number4">4</div>
+              <div class="number number5">5</div>
+              <div class="number number6">6</div>
+              <div class="number number7">7</div>
+              <div class="number number8">8</div>
+              <div class="number number9">9</div>
+              <div class="number number10">10</div>
+              <div class="number number11">11</div>
+              <div class="number number12">12</div>
+            </div>
+          </div>
+          <div class="controls">
+            <label for="hour" style="margin-left: 30px">Set Hour: </label>
+            <input
+              type="number"
+              id="hour"
+              style="font-size: 15px"
+              min="1"
+              max="12"
+              value="12"
+            />
+
+            <label for="minute" style="margin-left: 30px">Set Minute:</label>
+            <input
+              type="number"
+              id="minute"
+              style="font-size: 15px"
+              min="0"
+              max="59"
+              value="0"
+            />
+
+            <button
+              id="set-time-button"
+              style="
+                font-size: 18px;
+                background-color: white;
+                padding: 3px;
+                margin-top: 10px;
+                margin-left: 40%;
+              "
+            >
+              Set Time
+            </button>
+            
+          </div>
+          
+          <a href="clockquiz.html" class="next">Click here for Quiz</a>                     
+         
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <script src="clock.js"></script>
+  </body>
+</html>

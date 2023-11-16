@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="story.css">
+    <script src="story.js"></script>
+    
+      
+</head>
+<body> <section>
+    <div class="centered-container">
+    <div class="story-question-container">
+        <h2>Read the story and answer the question:</h2>
+        
+        <div id="story-container" style="display: none; font-size: 20px;">
+          <p id="story-text" style="font-size: 25px;">
+               Raju has a red car.He also has a blue truck and a yellow cycle.
+            </p>
+             <audio id="story-audio" controls>
+                <source src="raju.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                
+            </audio>
+            <audio id="correct-audio" src="success-fanfare-trumpets-6185.mp3"></audio>
+            <audio id="incorrect-audio" src="wah-wah-sad-trombone-6347.mp3"></audio>
+            <div class="timer-container">
+                Try to remember the details without using repeat option.<br>
+                Time remaining to read...hurry!!:
+                <div class="countdown-bar">
+                    <div id="countdown-timer"></div>
+                </div>
+            </div>
+            
+           
+        </div>
+        <button id="show-story-button" onclick="showStory()" style="font-size: 15px; font-weight: 1000;">Show Story</button>
+        <button id="story-recall-button" onclick="checkStoryRecall()" style="display: none; font-size: 15px;font-weight: 1000;">Submit Answer</button>
+        <button id="repeat-button" onclick="repeatStory()" style="font-size: 15px;font-weight: 1000;" >Repeat</button>
+        <p id="story-recall-feedback"></p>
+      
+        <a href="memory.html" id="quiz-link" class="next1" style="display: none;">Click here for Memory-Match</a>
+
+    </div>
+     
+    </div>
+   
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+    </section>         
+</body>
+</html>

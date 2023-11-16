@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clockquiz.css">
+   
+    <title>Read the Clock Exercise</title>
+</head>
+<body>
+    <div class="context1">
+    <div class="centered-container">
+        <div class="clock-container">
+    
+
+    <div class="quiz-container">
+        <h1 class="question">Question : What time is it?</h1>
+        <div class="clock" style="margin-left: 35%;">
+            <div class="clock-hand hour-hand"></div>
+            <div class="clock-hand minute-hand"></div>
+            <div class="center-circle"></div>
+            <div class="numbers">
+                <div class="number number1">1</div>
+                <div class="number number2">2</div>
+                <div class="number number3">3</div>
+                <div class="number number4">4</div>
+                <div class="number number5">5</div>
+                <div class="number number6">6</div>
+                <div class="number number7">7</div>
+                <div class="number number8">8</div>
+                <div class="number number9">9</div>
+                <div class="number number10">10</div>
+                <div class="number number11">11</div>
+                <div class="number number12">12</div>
+            </div>
+        </div>
+        <audio id="correct-audio" src="success-fanfare-trumpets-6185.mp3"></audio>
+        <audio id="incorrect-audio" src="wah-wah-sad-trombone-6347.mp3"></audio>
+        <audio id="clap-audio" src="short-crowd-cheer-6713.mp3"></audio>
+    
+        <div class="options" style="margin-top: 15px;">
+            <button class="option" onclick="checkAnswer(1)">12:00 PM</button>
+            <button class="option" onclick="checkAnswer(2)">3:45 AM</button>
+            <button class="option" onclick="checkAnswer(3)">9:30 AM</button>
+        </div>
+        <div class="feedback"></div>
+        <button class="option" onclick="nextQuestion()">Next Question</button>
+    </div>
+</div>
+    </div>
+    </div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+  
+    
+    <script src="clockquiz.js"></script>
+</body>
+</html>

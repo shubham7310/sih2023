@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">s
+    <title>Shapes Quiz</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(79, 82, 79, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #0a0a0a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #505351;
+}
+
+.option img {
+     display: block;
+     width:50%;
+     max-width: 120px; 
+    max-height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#score-container {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+#score {
+    font-weight: bold;
+    font-size: 24px;
+    color: #4CAF50;
+}
+button{
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 25%;
+}
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Shapes Quiz</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="options"></div>
+        </div>
+        <div id="score-container">
+            <p>Your Score: <span id="score">0</span>/4</p>
+           <a  href="index.html"><button  >Next</button></a>
+        </div>
+    </div>
+    <script >
+        const questions = [
+    {
+        question: "Identify Alphabet Aa?",
+        options: [
+            {  correct: false, image: "sad.png" },
+            {  correct: false, image: "rectangle1.jpeg" },
+            {  correct: true, image: "a_learning.png" },
+            {  correct: false, image: "b_learning.png" }
+        ],
+    },
+    {
+        question: "Identify alphabet Bb ?",
+        options: [
+            {  correct: false, image: "fear.png" },
+            {  correct: true, image: "b_learning.png" },
+            {  correct: false, image: "oval.jpeg" },
+            {  correct: false, image: "c_learning.png" }
+        ],
+    },
+
+    // Add more questions here...
+    {
+        question: " Identify alphabet Cc ?",
+        options: [
+            { text: "Dog", correct: false, image: "kite.jpeg" },
+            {  correct: false, image: "d_learning.png" },
+            {  correct: false, image: "shock.png" },
+            {  correct: true, image: "c_learning.png" }
+        ],
+    },
+    {
+        question: "Identify alphabet Dd ?",
+        options: [
+            { text: "Dog", correct: true, image: "d_learning.png" },
+            { text: "Cat", correct: false, image: "square.jpeg" },
+            { text: "Fish", correct: false, image: "b_learning.png" },
+            { text: "Bird", correct: false, image: "happy.png" }
+        ],
+    },
+    
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const scoreElement = document.getElementById("score");
+
+function startQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+}
+
+function showQuestion() {
+    if (currentQuestion < questions.length) {
+        const question = questions[currentQuestion];
+        questionElement.innerText = question.question;
+
+        optionsElement.innerHTML = "";
+        question.options.forEach((option, index) => {
+            const optionElement = document.createElement("div");
+            optionElement.classList.add("option");
+            optionElement.innerHTML = `
+                <img src="${option.image}" alt="${option.text}">
+               
+            `;
+            optionElement.addEventListener("click", () => selectOption(index));
+            optionsElement.appendChild(optionElement);
+        });
+    } else {
+        showScore();
+    }
+}
+
+function selectOption(selectedIndex) {
+    const question = questions[currentQuestion];
+    const selectedOption = question.options[selectedIndex];
+
+    if (selectedOption.correct) {
+        score++;
+    }
+
+    currentQuestion++;
+    showQuestion();
+}
+
+function showScore() {
+    questionElement.innerText = "Quiz Completed!";
+    optionsElement.innerHTML = "";
+    scoreElement.innerText = score ;
+}
+
+startQuiz();
+
+    </script>
+</body>
+</html>
